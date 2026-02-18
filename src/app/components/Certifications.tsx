@@ -3,10 +3,13 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 export function Certifications() {
   const certifications = [
     {
-      image: 'https://images.unsplash.com/photo-1715173679369-18006e84d6a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwY2VydGlmaWNhdGUlMjBkaXBsb21hJTIwZnJhbWV8ZW58MXx8fHwxNzcxMzUwMjY4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'BDS Degree Certificate',
-      description: 'Bachelor of Dental Surgery from recognized university with distinction',
-      year: '2015',
+      {
+  image: '/mds-certificate.jpg',
+  title: 'Master of Dental Surgery (MDS)',
+  description: 'Orthodontics and Dentofacial Orthopaedics – MUHS, Nashik',
+  year: '2021',
+},
+
     },
     {
       image: 'https://images.unsplash.com/photo-1729870992116-5f1f59feb4ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjZXJ0aWZpY2F0aW9uJTIwYXdhcmQlMjBkb2N1bWVudHxlbnwxfHx8fDE3NzEzNTAyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080',
