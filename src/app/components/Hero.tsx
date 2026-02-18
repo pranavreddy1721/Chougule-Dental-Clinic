@@ -9,7 +9,7 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://lh3.googleusercontent.com/p/AF1QipOSjywzAKRfHftz9m3H9Bn0Pzc9LhRk1XFXgIWN=s1360-w1360-h1020-rw"
+          src="https://images.unsplash.com/photo-1762625570087-6d98fca29531?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkZW50YWwlMjBjbGluaWMlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzEzMjc1Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Modern Dental Clinic"
           className="w-full h-full object-cover"
         />
