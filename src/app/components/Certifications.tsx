@@ -3,18 +3,18 @@ import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 export function Certifications() {
   const certifications = [
     {
-      {
-  image: '/mds-certificate.jpg',
-  title: 'Master of Dental Surgery (MDS)',
-  description: 'Orthodontics and Dentofacial Orthopaedics – MUHS, Nashik',
-  year: '2021',
-},
-
+      image: '/mds-certificate.jpg',
+      title: 'Master of Dental Surgery (MDS)',
+      description:
+        'Orthodontics and Dentofacial Orthopaedics – MUHS, Nashik',
+      year: '2021',
     },
     {
-      image: 'https://images.unsplash.com/photo-1729870992116-5f1f59feb4ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjZXJ0aWZpY2F0aW9uJTIwYXdhcmQlMjBkb2N1bWVudHxlbnwxfHx8fDE3NzEzNTAyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image:
+        'https://images.unsplash.com/photo-1729870992116-5f1f59feb4ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjZXJ0aWZpY2F0aW9uJTIwYXdhcmQlMjBkb2N1bWVudHxlbnwxfHx8fDE3NzEzNTAyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080',
       title: 'Advanced Endodontics Certification',
-      description: 'Specialized training in advanced root canal treatment and procedures',
+      description:
+        'Specialized training in advanced root canal treatment and procedures',
       year: '2018',
     },
   ];
@@ -24,7 +24,9 @@ export function Certifications() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1E88E5]/10 to-[#26A69A]/10 rounded-full px-6 py-2 mb-6">
-            <span className="text-[#1E88E5] font-semibold">Professional Excellence</span>
+            <span className="text-[#1E88E5] font-semibold">
+              Professional Excellence
+            </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Certifications & Qualifications
@@ -73,8 +75,7 @@ export function Certifications() {
         {/* Scalability Note */}
         <div className="mt-16 text-center">
           <div className="inline-block bg-gradient-to-r from-[#1E88E5]/5 to-[#26A69A]/5 rounded-2xl px-8 py-5 border border-[#1E88E5]/20">
-            <p className="text-gray-600">
-             
+            <p className="text-gray-600"></p>
           </div>
         </div>
       </div>
