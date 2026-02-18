@@ -14,6 +14,8 @@ export function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
+          
+          {/* Left Side - Contact Info */}
           <div className="space-y-6">
             <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-8">
@@ -22,7 +24,6 @@ export function Contact() {
 
               <div className="space-y-7">
 
-                {/* Address */}
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1E88E5] to-[#1976D2] flex items-center justify-center flex-shrink-0 shadow-lg">
                     <MapPin className="text-white" size={26} />
@@ -43,7 +44,6 @@ export function Contact() {
                   </div>
                 </div>
 
-                {/* Phone */}
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#26A69A] to-[#00897B] flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Phone className="text-white" size={26} />
@@ -61,7 +61,6 @@ export function Contact() {
                   </div>
                 </div>
 
-                {/* Email */}
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1E88E5] to-[#1976D2] flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Mail className="text-white" size={26} />
@@ -79,7 +78,6 @@ export function Contact() {
                   </div>
                 </div>
 
-                {/* Working Hours */}
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#26A69A] to-[#00897B] flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Clock className="text-white" size={26} />
@@ -103,7 +101,6 @@ export function Contact() {
 
               </div>
 
-              {/* Directions Button */}
               <a
                 href="https://maps.app.goo.gl/inbBThmYUqL7f3RL7"
                 target="_blank"
@@ -116,7 +113,18 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Map Section stays same */}
+          {/* Right Side - Simple Map Section */}
+          <div className="contact-map">
+            <iframe
+              title="Chougule Dental Clinic Location"
+              src="https://www.google.com/maps?q=Chougule%20Dental%20Clinic%20Ashta%20Sangli&output=embed"
+              width="100%"
+              height="500"
+              style={{ border: 0 }}
+              loading="lazy"
+            ></iframe>
+          </div>
+
         </div>
       </div>
     </section>
