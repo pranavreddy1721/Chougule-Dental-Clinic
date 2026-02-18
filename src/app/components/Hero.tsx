@@ -9,7 +9,7 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1762625570087-6d98fca29531?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkZW50YWwlMjBjbGluaWMlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzEzMjc1Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://lh3.googleusercontent.com/p/AF1QipOSjywzAKRfHftz9m3H9Bn0Pzc9LhRk1XFXgIWN=s1360-w1360-h1020-rw"
           alt="Modern Dental Clinic"
           className="w-full h-full object-cover"
         />
@@ -30,15 +30,16 @@ export function Hero() {
         </div>
         
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
-          Chougule Dental Clinic
+          Your Smile,
+          Our Priority
         </h1>
         
         <p className="text-xl sm:text-2xl md:text-3xl text-white/95 mb-4 max-w-3xl mx-auto leading-relaxed">
-          Advanced Multispeciality Dental Care • Ashta
+          Advanced Painless & Affordable 
         </p>
 
         <p className="text-lg sm:text-xl text-white/90 mb-12 max-w-3xl mx-auto">
-          Painless & Affordable Treatments by Expert Doctors
+          Dental Care in Ashta
         </p>
         
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
