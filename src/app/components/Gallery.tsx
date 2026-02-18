@@ -8,11 +8,11 @@ export function Gallery() {
 
   const images = [
     {
-      url: Indoor4, 
+      url: 'https://scontent.fpnq7-6.fna.fbcdn.net/v/t1.6435-9/151137456_198538251632897_484506732293798768_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=dd6889&_nc_ohc=319V3PKd7EEQ7kNvwHUtaZ4&_nc_oc=AdlAIASUM0-dsiVCxT283BlppT-QTGyijEZ5vQWwTc09AgT9KqKCBIlrKB-TX-TkCMsX48ib8LXP4cvoQN3NGJK7&_nc_zt=23&_nc_ht=scontent.fpnq7-6.fna&_nc_gid=Qf-PIka2aG5TRdprqOWU-w&oh=00_Afu7Im-CtG0Ls5-QVInHpLEe2SV6I2gxy7PPtGVxnpZFiA&oe=69BD4B81',
       alt: 'Chougule Dental Clinic Interior',
     },
     {
-      url: 'https://images.unsplash.com/photo-1704455306251-b4634215d98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjaGFpciUyMGNsaW5pY3xlbnwxfHx8fDE3NzEzMjYwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://scontent.fpnq7-9.fna.fbcdn.net/v/t1.6435-9/151544295_198538304966225_6592539131668695107_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd6889&_nc_ohc=xhJn--weswcQ7kNvwEtsqaA&_nc_oc=AdleZaxficMexEoSB8w9zTngbNrp-91clrqdFWZSCJQV4lP9Xa_DOZxs7nyNhBOptR4QHdiZTLooDk6C1UQbD_By&_nc_zt=23&_nc_ht=scontent.fpnq7-9.fna&_nc_gid=FWmuevjeQtpBnxfCqM0nGw&oh=00_AfunnJrk4A_GxhFI-VoUy2Fa1ZwNBWEpIcyZjTptih-8SQ&oe=69BD6FF5',
       alt: 'Dental Chair',
     },
     {
@@ -24,7 +24,7 @@ export function Gallery() {
       alt: 'Clinic Reception',
     },
     {
-      url: 'https://images.unsplash.com/photo-1758205308179-4e00e0e4060b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZW50YWwlMjBvZmZpY2UlMjBlcXVpcG1lbnR8ZW58MXx8fHwxNzcxMzgxMjQ5fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      url: 'https://scontent.fpnq7-5.fna.fbcdn.net/v/t1.6435-9/151327761_198538268299562_3509955446495298618_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=dd6889&_nc_ohc=cH549ebQ95MQ7kNvwFJ6FPL&_nc_oc=AdndB79op3E9-c5P-bK-9BhuUbWBDVhOS_-WFV4qT7z5CXiiDgWKff55NnloxxVieBs-oN6ycUj8TfbRDaPfmP89&_nc_zt=23&_nc_ht=scontent.fpnq7-5.fna&_nc_gid=j9loRuHvrI6PkCRhqvyxxw&oh=00_Afv8SBGfIxMqXYhSFl8s5xKy-JQadS5ImK1Hm3JC9TZBhw&oe=69BD6DFA',
       alt: 'Treatment Room',
     },
     {
