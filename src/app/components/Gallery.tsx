@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import indoor4 from "src/assets/Indoor_4.jpg";
+import Indoor4 from "src/assets/Indoor_4.jpg";
 
 
 export function Gallery() {
@@ -8,7 +8,7 @@ export function Gallery() {
 
   const images = [
     {
-      url: indoor4, 
+      url: Indoor4, 
       alt: 'Chougule Dental Clinic Interior',
     },
     {
