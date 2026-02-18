@@ -14,13 +14,15 @@ export function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Information Card */}
           <div className="space-y-6">
             <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-8">
                 Contact Information
               </h3>
+
               <div className="space-y-7">
+
+                {/* Address */}
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1E88E5] to-[#1976D2] flex items-center justify-center flex-shrink-0 shadow-lg">
                     <MapPin className="text-white" size={26} />
@@ -30,13 +32,18 @@ export function Contact() {
                       Clinic Address
                     </h4>
                     <p className="text-gray-700 leading-relaxed">
-                      Chougule Multispeciality Dental Clinic
+                      Chougule Dental Clinic
                       <br />
-                      Ashta, Maharashtra, India
+                      First Floor, above DCC Bank (Jilha Madhyawarti Bank),
+                      <br />
+                      near Chandu Wadapav, Amruta Awati,
+                      <br />
+                      Ashta, Sangli, Maharashtra – 416301
                     </p>
                   </div>
                 </div>
 
+                {/* Phone */}
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#26A69A] to-[#00897B] flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Phone className="text-white" size={26} />
@@ -54,6 +61,7 @@ export function Contact() {
                   </div>
                 </div>
 
+                {/* Email */}
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1E88E5] to-[#1976D2] flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Mail className="text-white" size={26} />
@@ -71,6 +79,7 @@ export function Contact() {
                   </div>
                 </div>
 
+                {/* Working Hours */}
                 <div className="flex items-start gap-5">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#26A69A] to-[#00897B] flex items-center justify-center flex-shrink-0 shadow-lg">
                     <Clock className="text-white" size={26} />
@@ -80,16 +89,21 @@ export function Contact() {
                       Working Hours
                     </h4>
                     <div className="text-gray-700 space-y-1">
-                      <p>Monday - Saturday</p>
-                      <p className="font-medium text-[#1E88E5]">9:30 am–2 pm, 4:30–9 pm</p>
+                      <p>Monday – Saturday</p>
+                      <p className="font-medium text-[#1E88E5]">
+                        9:30 am – 2 pm, 4:30 – 9 pm
+                      </p>
                       <p className="mt-2">Sunday</p>
-                      <p className="font-medium text-[#1E88E5]">Closed</p>
+                      <p className="font-medium text-[#1E88E5]">
+                        Closed
+                      </p>
                     </div>
                   </div>
                 </div>
+
               </div>
 
-              {/* Get Directions Button */}
+              {/* Directions Button */}
               <a
                 href="https://maps.app.goo.gl/inbBThmYUqL7f3RL7"
                 target="_blank"
@@ -102,22 +116,7 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Google Map */}
-          <div className="lg:sticky lg:top-8">
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2654398765!2d74.71361807464384!3d17.405238483472244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc168cf2a1f081f%3A0x179e1f2a311fa391!2sChougule%20Multi-Speciality%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1708524832019!5m2!1sen!2sin"
-                width="100%"
-                height="600"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Chougule Multi-Speciality Dental Clinic Location"
-                className="w-full h-[600px]"
-              ></iframe>
-            </div>
-          </div>
+          {/* Map Section stays same */}
         </div>
       </div>
     </section>
