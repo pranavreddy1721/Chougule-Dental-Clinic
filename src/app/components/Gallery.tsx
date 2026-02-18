@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import indoor4 from "../assets/indoor_4.jpg";
+import indoor4 from "src/assets/Indoor_4.jpg";
 
 
 export function Gallery() {
