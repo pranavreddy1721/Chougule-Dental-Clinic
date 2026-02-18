@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
+import indoor4 from "../assets/indoor_4.jpg";
+
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
     {
-      url: 'https://images.unsplash.com/photo-1762625570087-6d98fca29531?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkZW50YWwlMjBjbGluaWMlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzEzMjc1Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Modern Clinic Interior',
+      url: indoor4, 
+      alt: 'Chougule Dental Clinic Interior',
     },
     {
       url: 'https://images.unsplash.com/photo-1704455306251-b4634215d98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjaGFpciUyMGNsaW5pY3xlbnwxfHx8fDE3NzEzMjYwMjR8MA&ixlib=rb-4.1.0&q=80&w=1080',
