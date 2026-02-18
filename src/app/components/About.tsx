@@ -72,7 +72,7 @@ export function About() {
           <div className="relative order-1 lg:order-2">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1762625570087-6d98fca29531?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkZW50YWwlMjBjbGluaWMlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzEzMjc1Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lh3.googleusercontent.com/p/AF1QipOSjywzAKRfHftz9m3H9Bn0Pzc9LhRk1XFXgIWN=s1360-w1360-h1020-rw"
                 alt="Modern Dental Clinic Interior"
                 className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover"
               />
