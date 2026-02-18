@@ -74,8 +74,7 @@ export function Certifications() {
         <div className="mt-16 text-center">
           <div className="inline-block bg-gradient-to-r from-[#1E88E5]/5 to-[#26A69A]/5 rounded-2xl px-8 py-5 border border-[#1E88E5]/20">
             <p className="text-gray-600">
-              <span className="font-semibold text-gray-900">More certifications available.</span> Additional credentials and awards can be added as the clinic grows.
-            </p>
+             
           </div>
         </div>
       </div>
