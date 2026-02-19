@@ -39,31 +39,52 @@ export function Reviews() {
 
   return (
     <section id="reviews" className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-3xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <Slider {...settings}>
-          {reviews.map((review, index) => (
-            <div key={index} className="px-3">
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 aspect-square md:aspect-auto md:min-h-[320px] flex flex-col border border-gray-100">
-
-                <h4 className="text-lg font-semibold text-gray-900 mb-1">{review.name}</h4>
-                <p className="text-sm text-gray-500 mb-3">{review.time}</p>
-
-                <div className="flex gap-1 mb-4">
-                  {[1,2,3,4,5].map((star)=>(
-                    <Star key={star} className="text-yellow-400 fill-yellow-400" size={18}/>
-                  ))}
-                </div>
-
-                <p className="text-gray-700 leading-relaxed flex-1 overflow-hidden line-clamp-6">
-                  {review.text}
-                </p>
-
-              </div>
+        {/* ⭐ Google Badge + Heading (restored) */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-3 bg-white rounded-2xl px-6 py-4 shadow-lg mb-6 border border-gray-100">
+            <span className="text-2xl font-bold">5.0</span>
+            <div className="flex">
+              {[1,2,3,4,5].map((s)=>(<Star key={s} className="text-yellow-400 fill-yellow-400" size={18}/>))}
             </div>
-          ))}
-        </Slider>
+            <span className="text-sm text-gray-500">Rating on Google</span>
+          </div>
 
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            What Our Patients Say
+          </h2>
+
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Most Trusted Dental Clinic in Ashta • Trusted by hundreds of satisfied patients
+          </p>
+        </div>
+
+        {/* ⭐ Slider */}
+        <div className="max-w-3xl mx-auto">
+          <Slider {...settings}>
+            {reviews.map((review, index) => (
+              <div key={index} className="px-3">
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 aspect-square md:aspect-auto md:min-h-[320px] flex flex-col border border-gray-100">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-1">{review.name}</h4>
+                  <p className="text-sm text-gray-500 mb-3">{review.time}</p>
+
+                  <div className="flex gap-1 mb-4">
+                    {[1,2,3,4,5].map((star)=>(
+                      <Star key={star} className="text-yellow-400 fill-yellow-400" size={18}/>
+                    ))}
+                  </div>
+
+                  <p className="text-gray-700 leading-relaxed flex-1 overflow-hidden line-clamp-6">
+                    {review.text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+
+        {/* ⭐ Button */}
         <div className="text-center mt-12">
           <a
             href="https://g.page/r/CZGjYx8qH8oXEBM/review"
