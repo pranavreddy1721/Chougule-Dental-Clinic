@@ -129,68 +129,48 @@ export function Reviews() {
     dots: true,
     infinite: true,
     speed: 600,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     pauseOnHover: true,
-    cssEase: 'ease-in-out',
-   responsive: [
-  {
-    breakpoint: 1024,
-    settings: { slidesToShow: 2, slidesToScroll: 1 },
-  },
-  {
-    breakpoint: 768,
-    settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false },
-  },
-],
-
   };
 
   return (
     <section id="reviews" className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto px-4">
 
-        <div className="mb-16 px-4">
-          <Slider {...settings}>
-            {reviews.map((review, index) => (
-              <div key={index} className="px-3">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-72 flex flex-col border border-gray-100">
-                  
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                        {review.name}
-                      </h4>
-                      <p className="text-sm text-gray-500">{review.time}</p>
-                    </div>
-                  </div>
+        <Slider {...settings}>
+          {reviews.map((review, index) => (
+            <div key={index} className="px-3">
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 aspect-square flex flex-col border border-gray-100">
 
-                  <div className="flex gap-1 mb-5">
-                    {[1,2,3,4,5].map((star) => (
-                      <Star key={star} className="text-yellow-400 fill-yellow-400" size={18}/>
-                    ))}
-                  </div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-1">{review.name}</h4>
+                <p className="text-sm text-gray-500 mb-3">{review.time}</p>
 
-                  <p className="text-gray-700 leading-relaxed flex-1 overflow-hidden line-clamp-5">
-                    {review.text}
-                  </p>
-
+                <div className="flex gap-1 mb-4">
+                  {[1,2,3,4,5].map((star)=>(
+                    <Star key={star} className="text-yellow-400 fill-yellow-400" size={18}/>
+                  ))}
                 </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
 
-        <div className="text-center">
+                <p className="text-gray-700 leading-relaxed flex-1 overflow-hidden line-clamp-6">
+                  {review.text}
+                </p>
+
+              </div>
+            </div>
+          ))}
+        </Slider>
+
+        <div className="text-center mt-12">
           <a
             href="https://g.page/r/CZGjYx8qH8oXEBM/review"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#1E88E5] to-[#26A69A] text-white rounded-full font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
-            <ExternalLink size={20} />
+            <ExternalLink size={20}/>
             View All Reviews on Google
           </a>
         </div>
