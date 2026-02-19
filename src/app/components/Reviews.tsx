@@ -138,18 +138,11 @@ export function Reviews() {
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 2, slidesToScroll: 1, dots: true },
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
       },
       {
         breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-          arrows: false,
-          centerMode: false,
-          variableWidth: false,
-        },
+        settings: { slidesToShow: 1, slidesToScroll: 1, arrows: false },
       },
     ],
   };
@@ -161,8 +154,8 @@ export function Reviews() {
         <div className="mb-16 px-4">
           <Slider {...settings}>
             {reviews.map((review, index) => (
-              <div key={index} className="px-2">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 min-h-[280px] flex flex-col border border-gray-100">
+              <div key={index} className="px-3">
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-72 flex flex-col border border-gray-100">
                   
                   <div className="flex items-start justify-between mb-4">
                     <div>
@@ -179,7 +172,7 @@ export function Reviews() {
                     ))}
                   </div>
 
-                  <p className="text-gray-700 leading-relaxed flex-1">
+                  <p className="text-gray-700 leading-relaxed flex-1 overflow-hidden line-clamp-5">
                     {review.text}
                   </p>
 
