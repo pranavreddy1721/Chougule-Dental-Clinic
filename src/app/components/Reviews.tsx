@@ -128,18 +128,18 @@ export function Reviews() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 600,
-    slidesToShow: 1,
+    speed: 400,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     pauseOnHover: true,
     cssEase: 'ease-in-out',
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           dots: true,
         },
