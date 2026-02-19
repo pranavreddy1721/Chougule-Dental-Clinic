@@ -5,7 +5,7 @@ export function WhyChooseUs() {
     {
       icon: Users,
       title: 'Experienced Doctors',
-      description: '10+ years of professional dental expertise',
+      description: '5+ years of professional dental expertise',
       color: '#1E88E5',
     },
     {
@@ -17,7 +17,7 @@ export function WhyChooseUs() {
     {
       icon: Shield,
       title: 'Trusted Care',
-      description: '5000+ satisfied patients across Ashta',
+      description: '2000+ satisfied patients across Ashta',
       color: '#1E88E5',
     },
     {
