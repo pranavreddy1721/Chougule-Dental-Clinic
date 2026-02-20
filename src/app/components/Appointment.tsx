@@ -7,7 +7,14 @@ export function Appointment() {
     name: '',
     phone: '',
     message: '',
+    date: '',
+    time: '',
   });
+
+  const timeSlots = [
+    "09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","01:00 PM","01:30 PM",
+    "04:30 PM","05:00 PM","05:30 PM","06:00 PM","06:30 PM","07:00 PM","07:30 PM","08:00 PM","08:30 PM"
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,131 +23,91 @@ export function Appointment() {
       name: formData.name,
       phone: formData.phone,
       message: formData.message,
+      date: formData.date,
+      time: formData.time,
     };
 
-    emailjs
-      .send(
-        "service_qrumx55",
-        "template_908dksu",
-        templateParams,
-        "2mDLcruOZfH0K_PBA"
-      )
-      .then(
-        () => {
-          alert('Appointment request sent successfully ✅');
-          setFormData({ name: '', phone: '', message: '' });
-        },
-        () => {
-          alert('Something went wrong ❌ Please try again.');
-        }
-      );
+    emailjs.send(
+      "service_qrumx55",
+      "template_908dksu",
+      templateParams,
+      "2mDLcruOZfH0K_PBA"
+    ).then(() => {
+      alert('Appointment request sent successfully ✅');
+      setFormData({ name:'', phone:'', message:'', date:'', time:'' });
+    }).catch(()=>{
+      alert('Something went wrong ❌ Please try again.');
+    });
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const handleChange = (e:any) => {
+    setFormData({...formData,[e.target.name]:e.target.value});
   };
 
   return (
     <section id="appointment" className="py-24 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1E88E5]/10 to-[#26A69A]/10 rounded-full px-6 py-2 mb-6">
-            <span className="text-[#1E88E5] font-semibold">Book Now</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Schedule Your Appointment
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Take the first step towards a healthier smile
-          </p>
-        </div>
+      <div className="max-w-4xl mx-auto px-4">
 
-        <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
+        <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
           <form onSubmit={handleSubmit} className="space-y-6">
+
+            {/* Name */}
             <div>
-              <label
-                htmlFor="name"
-                className="flex items-center gap-2 font-semibold text-gray-700 mb-3"
-              >
-                <User size={20} className="text-[#1E88E5]" />
-                Full Name
+              <label className="flex items-center gap-2 font-semibold mb-2">
+                <User size={18}/> Name
               </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
+              <input name="name" value={formData.name} onChange={handleChange} required className="w-full border p-3 rounded-xl"/>
+            </div>
+
+            {/* Phone */}
+            <div>
+              <label className="flex items-center gap-2 font-semibold mb-2">
+                <Phone size={18}/> Phone
+              </label>
+              <input name="phone" value={formData.phone} onChange={handleChange} required className="w-full border p-3 rounded-xl"/>
+            </div>
+
+            {/* Date */}
+            <div>
+              <label className="flex items-center gap-2 font-semibold mb-2">
+                <Calendar size={18}/> Date
+              </label>
+              <input type="date" name="date" value={formData.date} onChange={handleChange} required className="w-full border p-3 rounded-xl"/>
+            </div>
+
+            {/* ⭐ Time dropdown */}
+            <div>
+              <label className="flex items-center gap-2 font-semibold mb-2">
+                <Calendar size={18}/> Time Slot
+              </label>
+
+              <select
+                name="time"
+                value={formData.time}
                 onChange={handleChange}
                 required
-                className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#1E88E5] focus:ring-4 focus:ring-[#1E88E5]/10 outline-none transition-all"
-                placeholder="Enter your name"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="phone"
-                className="flex items-center gap-2 font-semibold text-gray-700 mb-3"
+                className="w-full border p-3 rounded-xl"
               >
-                <Phone size={20} className="text-[#1E88E5]" />
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#1E88E5] focus:ring-4 focus:ring-[#1E88E5]/10 outline-none transition-all"
-                placeholder="Enter your phone number"
-              />
+                <option value="">Select time</option>
+                {timeSlots.map((slot,index)=>(
+                  <option key={index} value={slot}>{slot}</option>
+                ))}
+              </select>
             </div>
 
+            {/* Message */}
             <div>
-              <label
-                htmlFor="message"
-                className="flex items-center gap-2 font-semibold text-gray-700 mb-3"
-              >
-                <MessageSquare size={20} className="text-[#1E88E5]" />
-                Message (Optional)
+              <label className="flex items-center gap-2 font-semibold mb-2">
+                <MessageSquare size={18}/> Message
               </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#1E88E5] focus:ring-4 focus:ring-[#1E88E5]/10 outline-none transition-all resize-none"
-                placeholder="Tell us about your dental concern..."
-              ></textarea>
+              <textarea name="message" value={formData.message} onChange={handleChange} className="w-full border p-3 rounded-xl"/>
             </div>
 
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-[#1E88E5] to-[#26A69A] text-white py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-3"
-            >
-              <Send size={22} />
-              Book Appointment Now
+            <button className="w-full bg-gradient-to-r from-blue-500 to-teal-500 text-white p-4 rounded-xl flex items-center justify-center gap-2">
+              <Send size={18}/> Book Appointment
             </button>
-          </form>
 
-          <div className="mt-8 pt-8 border-t border-gray-200">
-            <p className="text-center text-gray-600">
-              Or call us directly at{' '}
-              <a
-                href="tel:+917350075545"
-                className="font-bold text-[#1E88E5] hover:text-[#26A69A] transition-colors"
-              >
-                +91 73500 75545
-              </a>
-            </p>
-          </div>
+          </form>
         </div>
       </div>
     </section>
