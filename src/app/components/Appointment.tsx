@@ -1,7 +1,7 @@
-  import { useState } from 'react';
+import { useState } from 'react';
 import { Calendar, User, Phone, MessageSquare, Send } from 'lucide-react';
 import emailjs from "@emailjs/browser";
-import CryptoJS from "crypto-js"
+import CryptoJS from "crypto-js";
 
 export function Appointment() {
 
@@ -13,8 +13,8 @@ export function Appointment() {
     time: '',
   });
 
-   // Secret Key
-  const SECRET_KEY = "clinic_secret_123"
+  // ⭐ Secret Key for AES
+  const SECRET_KEY = "clinic_secret_123";
 
   /* ⭐ Handle change with Sunday validation */
   const handleChange = (e: any) => {
@@ -35,16 +35,23 @@ export function Appointment() {
     });
   };
 
-  /* ⭐ Submit */
+  /* ⭐ Submit with AES Encryption */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // ⭐ Encrypt form data using AES
+    const encryptedName = CryptoJS.AES.encrypt(formData.name, SECRET_KEY).toString();
+    const encryptedPhone = CryptoJS.AES.encrypt(formData.phone, SECRET_KEY).toString();
+    const encryptedMessage = CryptoJS.AES.encrypt(formData.message, SECRET_KEY).toString();
+    const encryptedDate = CryptoJS.AES.encrypt(formData.date, SECRET_KEY).toString();
+    const encryptedTime = CryptoJS.AES.encrypt(formData.time, SECRET_KEY).toString();
+
     const templateParams = {
-      name: formData.name,
-      phone: formData.phone,
-      message: formData.message,
-      date: formData.date,
-      time: formData.time,
+      name: encryptedName,
+      phone: encryptedPhone,
+      message: encryptedMessage,
+      date: encryptedDate,
+      time: encryptedTime,
     };
 
     emailjs.send(
@@ -97,7 +104,7 @@ export function Appointment() {
               />
             </div>
 
-            {/* ⭐ Date */}
+            {/* Date */}
             <div>
               <label className="flex items-center gap-2 font-semibold text-gray-700 mb-3">
                 <Calendar size={20} className="text-[#1E88E5]" />
@@ -114,7 +121,7 @@ export function Appointment() {
               />
             </div>
 
-            {/* ⭐ Time slot dropdown */}
+            {/* Time */}
             <div>
               <label className="flex items-center gap-2 font-semibold text-gray-700 mb-3">
                 <Calendar size={20} className="text-[#1E88E5]" />
