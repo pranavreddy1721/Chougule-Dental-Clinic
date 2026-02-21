@@ -13,6 +13,9 @@ export function Appointment() {
     time: '',
   });
 
+   // Secret Key
+  const SECRET_KEY = "clinic_secret_123"
+
   /* ⭐ Handle change with Sunday validation */
   const handleChange = (e: any) => {
 
