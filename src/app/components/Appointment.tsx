@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Calendar, User, Phone, MessageSquare, Send } from 'lucide-react';
 import emailjs from "@emailjs/browser";
-import CryptoJS from "crypto-js";
 
 export function Appointment() {
 
@@ -12,9 +11,6 @@ export function Appointment() {
     date: '',
     time: '',
   });
-
-  // ⭐ Secret Key for AES
-  const SECRET_KEY = "clinic_secret_123";
 
   /* ⭐ Handle change with Sunday validation */
   const handleChange = (e: any) => {
@@ -35,23 +31,17 @@ export function Appointment() {
     });
   };
 
-  /* ⭐ Submit with AES Encryption */
+  /* ⭐ Submit */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // ⭐ Encrypt form data using AES
-    const encryptedName = CryptoJS.AES.encrypt(formData.name, SECRET_KEY).toString();
-    const encryptedPhone = CryptoJS.AES.encrypt(formData.phone, SECRET_KEY).toString();
-    const encryptedMessage = CryptoJS.AES.encrypt(formData.message, SECRET_KEY).toString();
-    const encryptedDate = CryptoJS.AES.encrypt(formData.date, SECRET_KEY).toString();
-    const encryptedTime = CryptoJS.AES.encrypt(formData.time, SECRET_KEY).toString();
-
+    // ⭐ Plain data (AES removed)
     const templateParams = {
-      name: encryptedName,
-      phone: encryptedPhone,
-      message: encryptedMessage,
-      date: encryptedDate,
-      time: encryptedTime,
+      name: formData.name,
+      phone: formData.phone,
+      message: formData.message,
+      date: formData.date,
+      time: formData.time,
     };
 
     emailjs.send(
