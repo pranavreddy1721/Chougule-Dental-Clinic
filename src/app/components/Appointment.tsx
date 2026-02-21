@@ -1,7 +1,7 @@
-import CryptoJS from "crypto-js"
   import { useState } from 'react';
 import { Calendar, User, Phone, MessageSquare, Send } from 'lucide-react';
 import emailjs from "@emailjs/browser";
+import CryptoJS from "crypto-js"
 
 export function Appointment() {
 
