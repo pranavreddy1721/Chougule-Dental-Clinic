@@ -20,7 +20,7 @@ export function Footer() {
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 rounded-full overflow-hidden bg-white shadow-md">
                 <img 
-                  src="public/Chougule_logo.jpg"
+                  src="Chougule_logo.jpg"
                   alt="Chougule Dental Clinic Logo" 
                   className="w-full h-full object-cover"
                 />
