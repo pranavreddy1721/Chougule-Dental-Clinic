@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react';
-
+ 
 
 export function Footer() {
   const quickLinks = [
