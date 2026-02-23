@@ -39,7 +39,7 @@ export function Navigation() {
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 rounded-full overflow-hidden bg-white shadow-md">
               <img 
-                src="https://scontent.fpnq7-3.fna.fbcdn.net/v/t39.30808-6/358694955_734002048731150_8613471796808913725_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=KLW9a4RVVBsQ7kNvwGejmyS&_nc_oc=AdlvHRcEbmnGLXukSrHFksclhRnQfj0NYdgR_zg15ZId-a0Hn3oXlVzIzefzMQ1uYAoLJ3ok0meCL9OB2vrgjKq1&_nc_zt=23&_nc_ht=scontent.fpnq7-3.fna&_nc_gid=BjWnaQm2V4FVYaF8IIp7Cw&oh=00_AfuKHtAGRnWlGvFv8VEgR29XBbb7HHws6aDYQ7_S2ssrPA&oe=699A9FFD"
+                src="public/Chougule_logo.jpg"
                 alt="Chougule Dental Clinic Logo" 
                 className="w-full h-full object-cover"
               />
