@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react';
-import logoImage from 'figma:asset/b2b0bc334fa69d292ba173b889dfc20dcf493036.png';
+
 
 export function Footer() {
   const quickLinks = [
