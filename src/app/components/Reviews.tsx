@@ -122,7 +122,7 @@ export function Reviews() {
         {/* ⭐ Button */}
         <div className="text-center mt-12">
           <a
-            href="https://g.page/r/CZGjYx8qH8oXEBM/review"
+            href="https://www.google.com/maps/search/?api=1&query=Chougule+Multispeciality+Dental+Clinic+Ashta"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#1E88E5] to-[#26A69A] text-white rounded-full font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
