@@ -4,7 +4,7 @@ Official website for Chougule Multi-Speciality Dental Clinic, Ashta.
 
 ## Tech Stack
 - React
-- Vite
+- Typescript
 - Tailwind CSS
 
 ## Features
