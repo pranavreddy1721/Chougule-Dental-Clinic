@@ -10,9 +10,8 @@ export function Certifications() {
       year: '2021',
     },
     {
-      image:
-        'https://images.unsplash.com/photo-1729870992116-5f1f59feb4ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjZXJ0aWZpY2F0aW9uJTIwYXdhcmQlMjBkb2N1bWVudHxlbnwxfHx8fDE3NzEzNTAyNjl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      title: 'Advanced Endodontics Certification',
+      image: '/MDS_Degree.jpeg',
+      title: 'Master of Dental Surgery (MDS)',
       description:
         'Specialized training in advanced root canal treatment and procedures',
       year: '2018',
