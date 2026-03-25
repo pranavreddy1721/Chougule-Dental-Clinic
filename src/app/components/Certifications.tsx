@@ -14,7 +14,7 @@ export function Certifications() {
       title: 'Master of Dental Surgery (MDS)',
       description:
         'Specialized training in advanced root canal treatment and procedures',
-      year: '2018',
+      year: '2021',
     },
   ];
 
