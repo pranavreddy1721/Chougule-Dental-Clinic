@@ -39,7 +39,7 @@ export function Hero() {
         </p>
 
         <p className="text-lg sm:text-xl text-white/90 mb-12 max-w-3xl mx-auto">
-          Dental Care in Ashta
+          Dental Care in Ashta (Maharashtra)
         </p>
         
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
