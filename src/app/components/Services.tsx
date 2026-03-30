@@ -1,46 +1,37 @@
-import {
-  Activity,
-  Sparkles,
-  Layers,
-  Scissors,
-  Smile,
-  Stethoscope,
-} from 'lucide-react';
-
 export function Services() {
   const services = [
     {
-      icon: Activity,
+      image: "https://images.unsplash.com/photo-1588776814546-ec7e1b5b2c6f",
       title: 'Root Canal Treatment',
       description: 'Advanced, painless root canal therapy using modern techniques',
       color: '#1E88E5',
     },
     {
-      icon: Layers,
+      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95",
       title: 'Dental Implants',
       description: 'Permanent tooth replacement solutions for a natural look',
       color: '#26A69A',
     },
     {
-      icon: Smile,
+      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
       title: 'Braces & Orthodontics',
       description: 'Comprehensive orthodontic care for perfect alignment',
       color: '#1E88E5',
     },
     {
-      icon: Sparkles,
+      image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe",
       title: 'Teeth Cleaning & Whitening',
       description: 'Professional cleaning and whitening for a brighter smile',
       color: '#26A69A',
     },
     {
-      icon: Scissors,
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5",
       title: 'Tooth Extraction',
       description: 'Safe and comfortable tooth removal procedures',
       color: '#1E88E5',
     },
     {
-      icon: Stethoscope,
+      image: "https://images.unsplash.com/photo-1598257006458-087169a1f08d",
       title: 'Smile Designing',
       description: 'Cosmetic dentistry for your dream smile',
       color: '#26A69A',
@@ -50,13 +41,16 @@ export function Services() {
   return (
     <section id="services" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1E88E5]/10 to-[#26A69A]/10 rounded-full px-6 py-2 mb-6">
             <span className="text-[#1E88E5] font-semibold">Expert Care</span>
           </div>
+
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our Services
           </h2>
+
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Comprehensive dental care services tailored to your needs
           </p>
@@ -66,34 +60,58 @@ export function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden"
+              className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden"
             >
-              {/* Gradient Background on Hover */}
-              <div 
-                className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500"
-                style={{ background: `linear-gradient(135deg, ${service.color} 0%, transparent 100%)` }}
-              ></div>
               
+              {/* Hover Gradient */}
+              <div 
+                className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-500"
+                style={{ background: `linear-gradient(135deg, ${service.color}, transparent)` }}
+              ></div>
+
               <div className="relative">
+                
+                {/* PREMIUM IMAGE BOX */}
                 <div
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
-                  style={{ 
-                    backgroundColor: `${service.color}15`,
-                    boxShadow: `0 8px 16px ${service.color}20`
-                  }}
+                  className="relative w-16 h-16 rounded-2xl overflow-hidden mb-6 transition-all duration-500 group-hover:scale-110"
+                  style={{ boxShadow: `0 10px 25px ${service.color}30` }}
                 >
-                  <service.icon size={32} style={{ color: service.color }} />
+                  {/* Image */}
+                  <img
+                    src={`${service.image}?auto=format&fit=crop&w=200&q=80`}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
+                  />
+
+                  {/* Premium Overlay (Uniform Style) */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+
+                  {/* Shine Effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
+                    <div className="absolute -left-full top-0 w-full h-full bg-white/30 skew-x-12 group-hover:left-full transition-all duration-700"></div>
+                  </div>
                 </div>
+
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1E88E5] transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+
+                <p className="text-gray-600 leading-relaxed mb-5">
                   {service.description}
                 </p>
+
+                <button
+                  className="mt-auto inline-block px-5 py-2 rounded-lg text-sm font-medium text-white transition-all duration-300 hover:scale-105"
+                  style={{ backgroundColor: service.color }}
+                >
+                  Book Appointment
+                </button>
+
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
