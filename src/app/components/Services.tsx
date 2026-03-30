@@ -1,5 +1,18 @@
 export function Services() {
 
+  const scrollToAppointment = (serviceTitle: string) => {
+    // Save selected service
+    localStorage.setItem("selectedService", serviceTitle);
+
+    // Scroll after slight delay (ensures DOM ready)
+    setTimeout(() => {
+      const section = document.getElementById("appointment");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   const services = [
     {
       image: "/root_canal.jpg",
@@ -66,7 +79,6 @@ export function Services() {
               className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden"
             >
               
-              {/* Hover Gradient */}
               <div 
                 className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-500"
                 style={{ background: `linear-gradient(135deg, ${service.color}, transparent)` }}
@@ -85,8 +97,6 @@ export function Services() {
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
                   />
-
-                  {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
                 </div>
 
@@ -100,14 +110,9 @@ export function Services() {
                   {service.description}
                 </p>
 
-                {/* ✅ BUTTON CONNECTED */}
+                {/* ✅ FIXED BUTTON */}
                 <button
-                  onClick={() => {
-                    localStorage.setItem("selectedService", service.title);
-                    document
-                      .getElementById("appointment")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
+                  onClick={() => scrollToAppointment(service.title)}
                   className="mt-auto inline-block px-5 py-2 rounded-lg text-sm font-medium text-white transition-all duration-300 hover:scale-105"
                   style={{ backgroundColor: service.color }}
                 >
