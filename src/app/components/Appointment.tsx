@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Calendar, User, Phone, MessageSquare, Send } from 'lucide-react';
 import emailjs from "@emailjs/browser";
 
@@ -10,7 +10,19 @@ export function Appointment() {
     message: '',
     date: '',
     time: '',
+    service: '',
   });
+
+  // ✅ Get selected service from Services section
+  useEffect(() => {
+    const selected = localStorage.getItem("selectedService");
+    if (selected) {
+      setFormData((prev) => ({
+        ...prev,
+        service: selected,
+      }));
+    }
+  }, []);
 
   /* ⭐ Handle change with Sunday validation */
   const handleChange = (e: any) => {
@@ -35,13 +47,13 @@ export function Appointment() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // ⭐ Plain data (AES removed)
     const templateParams = {
       name: formData.name,
       phone: formData.phone,
       message: formData.message,
       date: formData.date,
       time: formData.time,
+      service: formData.service,
     };
 
     emailjs.send(
@@ -51,7 +63,7 @@ export function Appointment() {
       "2mDLcruOZfH0K_PBA"
     ).then(() => {
       alert('Appointment request sent successfully ✅');
-      setFormData({ name:'', phone:'', message:'', date:'', time:'' });
+      setFormData({ name:'', phone:'', message:'', date:'', time:'', service:'' });
     }).catch(()=>{
       alert('Something went wrong ❌ Please try again.');
     });
@@ -59,6 +71,22 @@ export function Appointment() {
 
   return (
     <section id="appointment" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+
+      {/* ✅ NEW HEADING */}
+      <div className="text-center mb-16">
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1E88E5]/10 to-[#26A69A]/10 rounded-full px-6 py-2 mb-6">
+          <span className="text-[#1E88E5] font-semibold">Easy Booking</span>
+        </div>
+
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Book Your Appointment
+        </h2>
+
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          Schedule your visit with our expert dental team for a healthy and confident smile
+        </p>
+      </div>
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100">
