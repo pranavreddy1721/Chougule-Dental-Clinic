@@ -1,4 +1,5 @@
 export function Services() {
+
   const services = [
     {
       image: "/root_canal.jpg",
@@ -41,7 +42,8 @@ export function Services() {
   return (
     <section id="services" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
+        {/* Heading */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1E88E5]/10 to-[#26A69A]/10 rounded-full px-6 py-2 mb-6">
             <span className="text-[#1E88E5] font-semibold">Expert Care</span>
@@ -56,6 +58,7 @@ export function Services() {
           </p>
         </div>
 
+        {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
@@ -63,6 +66,7 @@ export function Services() {
               className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden"
             >
               
+              {/* Hover Gradient */}
               <div 
                 className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-500"
                 style={{ background: `linear-gradient(135deg, ${service.color}, transparent)` }}
@@ -70,7 +74,7 @@ export function Services() {
 
               <div className="relative">
                 
-                {/* IMAGE BOX */}
+                {/* Image */}
                 <div
                   className="relative w-16 h-16 rounded-2xl overflow-hidden mb-6 transition-all duration-500 group-hover:scale-110"
                   style={{ boxShadow: `0 10px 25px ${service.color}30` }}
@@ -86,15 +90,24 @@ export function Services() {
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
                 </div>
 
+                {/* Title */}
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1E88E5] transition-colors">
                   {service.title}
                 </h3>
 
+                {/* Description */}
                 <p className="text-gray-600 leading-relaxed mb-5">
                   {service.description}
                 </p>
 
+                {/* ✅ BUTTON CONNECTED */}
                 <button
+                  onClick={() => {
+                    localStorage.setItem("selectedService", service.title);
+                    document
+                      .getElementById("appointment")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
                   className="mt-auto inline-block px-5 py-2 rounded-lg text-sm font-medium text-white transition-all duration-300 hover:scale-105"
                   style={{ backgroundColor: service.color }}
                 >
