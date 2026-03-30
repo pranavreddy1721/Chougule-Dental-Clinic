@@ -81,7 +81,7 @@ export function About() {
             {/* Floating Badge */}
             <div className="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-8 bg-gradient-to-br from-[#1E88E5] to-[#26A69A] text-white rounded-3xl p-6 sm:p-8 shadow-2xl">
               <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold mb-2">1000+</div>
+                <div className="text-3xl sm:text-4xl font-bold mb-2">10000+</div>
                 <div className="text-xs sm:text-sm font-medium opacity-90">Happy Patients</div>
               </div>
             </div>
