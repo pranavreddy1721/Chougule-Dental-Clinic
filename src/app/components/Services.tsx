@@ -1,37 +1,37 @@
 export function Services() {
   const services = [
     {
-      image: "https://images.unsplash.com/photo-1588776814546-ec7e1b5b2c6f",
+      image: "/root_canal.jpg",
       title: 'Root Canal Treatment',
       description: 'Advanced, painless root canal therapy using modern techniques',
       color: '#1E88E5',
     },
     {
-      image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95",
+      image: "/dental_implant.png",
       title: 'Dental Implants',
       description: 'Permanent tooth replacement solutions for a natural look',
       color: '#26A69A',
     },
     {
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
+      image: "/braces.jpg",
       title: 'Braces & Orthodontics',
       description: 'Comprehensive orthodontic care for perfect alignment',
       color: '#1E88E5',
     },
     {
-      image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe",
+      image: "/teeth_whitening.jpg",
       title: 'Teeth Cleaning & Whitening',
       description: 'Professional cleaning and whitening for a brighter smile',
       color: '#26A69A',
     },
     {
-      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5",
+      image: "/tooth_extraction.jpg",
       title: 'Tooth Extraction',
       description: 'Safe and comfortable tooth removal procedures',
       color: '#1E88E5',
     },
     {
-      image: "https://images.unsplash.com/photo-1598257006458-087169a1f08d",
+      image: "/smile_Designing.jpg",
       title: 'Smile Designing',
       description: 'Cosmetic dentistry for your dream smile',
       color: '#26A69A',
@@ -63,7 +63,6 @@ export function Services() {
               className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 overflow-hidden"
             >
               
-              {/* Hover Gradient */}
               <div 
                 className="absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-500"
                 style={{ background: `linear-gradient(135deg, ${service.color}, transparent)` }}
@@ -71,25 +70,20 @@ export function Services() {
 
               <div className="relative">
                 
-                {/* PREMIUM IMAGE BOX */}
+                {/* IMAGE BOX */}
                 <div
                   className="relative w-16 h-16 rounded-2xl overflow-hidden mb-6 transition-all duration-500 group-hover:scale-110"
                   style={{ boxShadow: `0 10px 25px ${service.color}30` }}
                 >
-                  {/* Image */}
                   <img
-                    src={`${service.image}?auto=format&fit=crop&w=200&q=80`}
+                    src={service.image}
                     alt={service.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
                   />
 
-                  {/* Premium Overlay (Uniform Style) */}
+                  {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
-
-                  {/* Shine Effect */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700">
-                    <div className="absolute -left-full top-0 w-full h-full bg-white/30 skew-x-12 group-hover:left-full transition-all duration-700"></div>
-                  </div>
                 </div>
 
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#1E88E5] transition-colors">
