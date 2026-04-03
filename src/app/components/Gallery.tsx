@@ -1,61 +1,59 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import Indoor4 from "../../../assets/Indoor_4.jpg";
-
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
     {
-      url: 'https://scontent.fpnq7-6.fna.fbcdn.net/v/t1.6435-9/151137456_198538251632897_484506732293798768_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=dd6889&_nc_ohc=319V3PKd7EEQ7kNvwHUtaZ4&_nc_oc=AdlAIASUM0-dsiVCxT283BlppT-QTGyijEZ5vQWwTc09AgT9KqKCBIlrKB-TX-TkCMsX48ib8LXP4cvoQN3NGJK7&_nc_zt=23&_nc_ht=scontent.fpnq7-6.fna&_nc_gid=Qf-PIka2aG5TRdprqOWU-w&oh=00_Afu7Im-CtG0Ls5-QVInHpLEe2SV6I2gxy7PPtGVxnpZFiA&oe=69BD4B81',
-      alt: 'Chougule Dental Clinic Interior',
+      url: '/Doctor_chair.jpg',
+      alt: 'Doctor Consultation Area',
     },
     {
-      url: 'https://scontent.fpnq7-9.fna.fbcdn.net/v/t1.6435-9/151544295_198538304966225_6592539131668695107_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd6889&_nc_ohc=xhJn--weswcQ7kNvwEtsqaA&_nc_oc=AdleZaxficMexEoSB8w9zTngbNrp-91clrqdFWZSCJQV4lP9Xa_DOZxs7nyNhBOptR4QHdiZTLooDk6C1UQbD_By&_nc_zt=23&_nc_ht=scontent.fpnq7-9.fna&_nc_gid=FWmuevjeQtpBnxfCqM0nGw&oh=00_AfunnJrk4A_GxhFI-VoUy2Fa1ZwNBWEpIcyZjTptih-8SQ&oe=69BD6FF5',
-      alt: 'Dental Chair',
+      url: '/Dental_chair2.jpg',
+      alt: 'Advanced Dental Treatment Setup',
     },
     {
-      url: 'https://images.unsplash.com/photo-1758812821349-1d2a4a96eecd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjbGluaWMlMjBlcXVpcG1lbnQlMjByb29tfGVufDF8fHx8MTc3MTM0ODg1M3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Equipment Room',
+      url: '/Dental_chair.jpg',
+      alt: 'Modern Dental Equipment',
     },
     {
-      url: 'https://images.unsplash.com/photo-1764727291644-5dcb0b1a0375?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwY2xpbmljJTIwcmVjZXB0aW9ufGVufDF8fHx8MTc3MTI3NjAwOHww&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Clinic Reception',
+      url: '/clinic_reception.jpg',
+      alt: 'Reception & Welcome Area',
     },
     {
-      url: 'https://scontent.fpnq7-5.fna.fbcdn.net/v/t1.6435-9/151327761_198538268299562_3509955446495298618_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=dd6889&_nc_ohc=cH549ebQ95MQ7kNvwFJ6FPL&_nc_oc=AdndB79op3E9-c5P-bK-9BhuUbWBDVhOS_-WFV4qT7z5CXiiDgWKff55NnloxxVieBs-oN6ycUj8TfbRDaPfmP89&_nc_zt=23&_nc_ht=scontent.fpnq7-5.fna&_nc_gid=j9loRuHvrI6PkCRhqvyxxw&oh=00_Afv8SBGfIxMqXYhSFl8s5xKy-JQadS5ImK1Hm3JC9TZBhw&oe=69BD6DFA',
-      alt: 'Treatment Room',
+      url: '/clinic_indoor.jpg',
+      alt: 'Clinic Interior & Hygiene',
     },
     {
-      url: 'https://images.unsplash.com/photo-1758205308181-d52b41e00cef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjbGluaWMlMjBleGFtaW5hdGlvbiUyMHJvb218ZW58MXx8fHwxNzcxMzgxMjUwfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Modern Equipment',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1764004450351-37fb72cb8e8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjbGluaWMlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc3MTM4MTI1MHww&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'Clinic Exterior',
+      url: '/Treatment_room.jpg',
+      alt: 'Premium Treatment Room',
     },
   ];
 
   return (
-    <section id="gallery" className="py-20 bg-white">
+    <section id="gallery" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Clinic Gallery
+            Our Clinic Gallery
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Take a virtual tour of our modern, hygienic facilities
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Explore our modern infrastructure, advanced equipment, and hygienic environment
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer group"
               onClick={() => setSelectedImage(image.url)}
+              className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
             >
+              {/* Image */}
               <div className="aspect-[4/3] overflow-hidden">
                 <img
                   src={image.url}
@@ -63,40 +61,41 @@ export function Gallery() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <p className="text-white p-4 font-semibold">{image.alt}</p>
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
+                <p className="text-white p-4 font-semibold text-lg">
+                  {image.alt}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-8">
-          <p className="text-gray-600 italic">
-           
-          </p>
-        </div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
+          {/* Close Button */}
           <button
-            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors"
             onClick={() => setSelectedImage(null)}
           >
-            <X size={32} />
+            <X size={34} />
           </button>
+
+          {/* Image */}
           <img
             src={selectedImage}
             alt="Gallery"
-            className="max-w-full max-h-full object-contain rounded-lg"
+            className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-lg"
           />
         </div>
       )}
     </section>
   );
 }
-
